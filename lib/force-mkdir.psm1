@@ -3,6 +3,7 @@
 # While `mkdir -force` works fine when dealing with regular folders, it behaves
 # strange when using it at registry level. If the target registry key is
 # already present, all values within that key are purged.
+
 function force-mkdir($path) {
     if (!(Test-Path $path)) {
         #Write-Host "-- Creating full path to: " $path -ForegroundColor White -BackgroundColor DarkGreen

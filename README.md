@@ -30,7 +30,8 @@ Unblock PowerShell scripts and modules within this directory:
 1. Install all available updates for your system.
 2. Edit the scripts to fit your need.
 3. Run the scripts from a PowerShell with administrator priviledges (Explorer `Files > Open Windows PowerShell > Open Windows PowerShell as administrator`)
-4. Restart Computer for Changes to Take Effect.
+4. cd to the directory containing the script files to run
+5. Restart Computer for Changes to Take Effect.
 
 ## Disabling Cortana
 

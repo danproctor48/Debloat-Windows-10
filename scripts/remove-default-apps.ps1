@@ -2,6 +2,7 @@
 # This script removes unwanted Apps that come with Windows. If you  do not want
 # to remove certain Apps comment out the corresponding lines below.
 
+
 Import-Module -DisableNameChecking $PSScriptRoot\..\lib\take-own.psm1
 Import-Module -DisableNameChecking $PSScriptRoot\..\lib\force-mkdir.psm1
 
@@ -10,26 +11,27 @@ do {} until (Elevate-Privileges SeTakeOwnershipPrivilege)
 
 echo "Uninstalling default apps"
 $apps = @(
-    # default Windows 10 apps
+    # These are the Default Windows 10 apps that can be removed. Comment them out or delete any you wish to keep.
+
     "Microsoft.3DBuilder"
     "Microsoft.Appconnector"
     "Microsoft.BingFinance"
     "Microsoft.BingNews"
     "Microsoft.BingSports"
     "Microsoft.BingWeather"
-    #"Microsoft.FreshPaint"
+    "Microsoft.FreshPaint"
     "Microsoft.Getstarted"
     "Microsoft.MicrosoftOfficeHub"
     "Microsoft.MicrosoftSolitaireCollection"
     #"Microsoft.MicrosoftStickyNotes"
     "Microsoft.Office.OneNote"
-    #"Microsoft.OneConnect"
+    "Microsoft.OneConnect"
     "Microsoft.People"
-    "Microsoft.SkypeApp"
+    "Microsoft.SkypeApp" #This is not Skype for Business
     #"Microsoft.Windows.Photos"
     "Microsoft.WindowsAlarms"
     #"Microsoft.WindowsCalculator"
-    "Microsoft.WindowsCamera"
+    #"Microsoft.WindowsCamera"
     "Microsoft.WindowsMaps"
     "Microsoft.WindowsPhone"
     "Microsoft.WindowsSoundRecorder"
@@ -50,14 +52,13 @@ $apps = @(
     "Microsoft.OneConnect"
     "Microsoft.WindowsFeedbackHub"
 
-
     #Redstone apps
     "Microsoft.BingFoodAndDrink"
     "Microsoft.BingTravel"
     "Microsoft.BingHealthAndFitness"
     "Microsoft.WindowsReadingList"
 
-    # non-Microsoft
+    # Non-Microsoft - If they are not on the machine the script will skip them.
     "9E2F88E3.Twitter"
     "PandoraMediaInc.29680B314EFC2"
     "Flipboard.Flipboard"
@@ -73,7 +74,7 @@ $apps = @(
     "D52A8D61.FarmVille2CountryEscape"
     "TuneIn.TuneInRadio"
     "GAMELOFTSA.Asphalt8Airborne"
-    #"TheNewYorkTimes.NYTCrossword"
+    "TheNewYorkTimes.NYTCrossword"
     "DB6EA5DB.CyberLinkMediaSuiteEssentials"
     "Facebook.Facebook"
     "flaregamesGmbH.RoyalRevolt2"
@@ -85,10 +86,10 @@ $apps = @(
     "89006A2E.AutodeskSketchBook"
     "D5EA27B7.Duolingo-LearnLanguagesforFree"
     "46928bounde.EclipseManager"
-    "ActiproSoftwareLLC.562882FEEB491" # next one is for the Code Writer from Actipro Software LLC
+    "ActiproSoftwareLLC.562882FEEB491"
 
-
-    # apps which cannot be removed using Remove-AppxPackage
+    # Below are apps which cannot be removed using Remove-AppxPackage
+    
     #"Microsoft.BioEnrollment"
     #"Microsoft.MicrosoftEdge"
     #"Microsoft.Windows.Cortana"
