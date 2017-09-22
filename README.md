@@ -36,15 +36,14 @@ Unblock PowerShell scripts and modules within this directory:
 
 **THIS WILL BREAK THE NATIVE WINDOWS 10 SEARCH FUNCTIONALITY**
 
-However, you will save a good chunk of resources not having Cortana running in the background. Additionally, the native start menu will still work and if you have your start menu organized, this won't bother you.
+However, you will save a good chunk of resources not having Cortana running in the background. Additionally, the native start menu will still work and if you have your start menu organized, this won't bother you. Want search back? Check the section below.
+
+
+## Startmenu
 
 My reccomendation would be using Start10 by StarDock. It's a $5 start menu replacement that brings back the look and feel of Windows 7 as well as faster local search capabilities. 
 
 https://www.stardock.com/products/start10/
-
-## Startmenu
-
-
 
 ## UWP Slack & Auto Startup
 Slack does not come with a start on boot option for Windows when downloaded from the Windows store.
