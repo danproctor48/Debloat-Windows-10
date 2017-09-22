@@ -38,6 +38,19 @@ Unblock PowerShell scripts and modules within this directory:
 
 However, you will save a good chunk of resources not having Cortana running in the background. Additionally, the native start menu will still work and if you have your start menu organized, this won't bother you. Want search back? Check the section below.
 
+My reccomendation is using TakeOwn to control ownership of the application files. This will come in handy developing certain system applications down the line. To create this in a context menu check out https://www.howtogeek.com/howto/windows-vista/add-take-ownership-to-explorer-right-click-menu-in-vista/. **Please be extra careful editing the registry!***
+
+    1. add TakeOwn to the context menu or (use takeown from the command line).
+    2. Navigate to C:\Windows
+    3. Create folder SystemApps.bak
+    4. Use Takeown to gain ownership of c:\windows\SystemApps\Microsoft.Windows.Cortana_cw5n1h2txyewy (Gain ownership of anything else you want to move)
+    5. Cut/Paste the folder(s) from SystemApps to SystemApps.bak
+    6. When the "Permissions" pop-up appears, switch to Task Manager
+    7. Kill SearchUI.exe process OR Kill the Cortana/App process 
+    8. Switch back and give permission to move the folder (You typically have about 2 seconds to give permission)
+
+The folder is now in SystemsApps.bak - and you can simply move it back if the need arises.
+
 
 ## Startmenu
 
